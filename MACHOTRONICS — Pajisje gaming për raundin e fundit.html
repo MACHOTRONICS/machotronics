@@ -9,7 +9,119 @@
 <meta property="og:type" content="website"><meta property="og:title" content="MACHOTRONICS — Pajisje gaming"><meta property="og:description" content="Tastiera, maus, kufje, karrige dhe aksesorë White Shark dhe Baracuda."><meta property="og:locale" content="sq_AL">
 <meta name="twitter:card" content="summary">
 <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
-<style>
+body {
+
+  position: relative;
+
+  isolation: isolate;
+
+  background-color: #03050b;
+
+  background-image:
+
+    radial-gradient(ellipse at 50% 40%, #07172c 0%, transparent 65%),
+
+    linear-gradient(135deg, #03050b, #08051a, #020812);
+
+  background-attachment: fixed;
+
+}
+
+body::before {
+
+  content: "";
+
+  position: fixed;
+
+  inset: 0;
+
+  z-index: -1;
+
+  pointer-events: none;
+
+  opacity: .65;
+
+  background:
+
+    linear-gradient(115deg, transparent 43%, #087dff 43.2%, transparent 43.7%),
+
+    linear-gradient(65deg, transparent 49%, #19e6ff 49.2%, transparent 49.6%),
+
+    linear-gradient(125deg, transparent 54%, #7b2cff 54.2%, transparent 54.6%),
+
+    linear-gradient(55deg, transparent 59%, #087dff 59.2%, transparent 59.5%);
+
+  background-size: 100% 100%;
+
+  animation: electricPulse 3s ease-in-out infinite alternate;
+
+}
+
+@keyframes electricPulse {
+
+  0% {
+
+    opacity: .25;
+
+    filter: brightness(.8);
+
+    transform: scale(1);
+
+  }
+
+  100% {
+
+    opacity: .8;
+
+    filter: brightness(1.8);
+
+    transform: scale(1.015);
+
+  }
+
+}
+
+/* Neon glow around the existing product cards */
+
+.card {
+
+  box-shadow: 0 0 0 transparent;
+
+  transition: border-color .3s, box-shadow .3s,
+
+              transform .3s;
+
+}
+
+.card:hover {
+
+  border-color: #19e6ff;
+
+  box-shadow: 0 0 22px #087dff35,
+
+              0 0 38px #8b5cf625;
+
+  transform: translateY(-4px);
+
+}
+
+/* Keep the background subtle on mobile */
+
+@media (max-width: 600px) {
+
+  body::before {
+
+    opacity: .35;
+
+  }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  body::before {
+
+    animation: none;<style>
 :root{--bg:#0B0D12;--surf:#151922;--line:#252B38;--tx:#E8ECF4;--mut:#8A93A6;--cy:#19E6FF;--uv:#8B5CF6;--mg:#FF2E88;--ok:#2BE3A1;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 html{scroll-padding-top:calc(70px + env(safe-area-inset-top,0px));scroll-behavior:smooth}
 *,*::before,*::after{box-sizing:inherit}
