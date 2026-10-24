@@ -124,7 +124,8 @@ footer h4{color:var(--tx);margin:0 0 10px;font-size:14px}footer a,footer button.
 @media(max-width:520px){.grid{gap:10px}.pic{height:130px}.info{padding:10px}.info h3{font-size:18px}.row{flex-wrap:wrap}.fg{grid-template-columns:1fr}.md{padding:16px}.add{padding:6px 8px;font-size:12px}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
-</head><body>
+</head>
+<body>
 <div class="bar">Dërgesë falas mbi 75 €. Garanci 6 mujore për çdo produkt.</div>
 <nav aria-label="Navigimi kryesor"><div class="wrap">
 <a class="logo" href="#top" aria-label="Machotronics, kreu">MACHO<i>TRONICS</i></a>
@@ -186,7 +187,8 @@ footer h4{color:var(--tx);margin:0 0 10px;font-size:14px}footer a,footer button.
 <aside class="dr" id="dr" aria-label="Shporta" aria-hidden="true"><div class="dh"><h3>Shporta</h3><button class="x" data-act="close" aria-label="Mbyll shportën">✕</button></div><div class="db" id="db"></div><div class="df" id="df"></div></aside>
 <div class="md" id="md" role="dialog" aria-modal="true" aria-label="Dritare"></div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
-<script src="images.js"></script><script>
+<script src="images.js"></script>
+<script>
 var D=[["head","B","Hydra",10.99,"stereo · 3.5mm + USB · RGB"],["head","B","Pearl",12.99,"on-ear · mikrofon · RGB"],["mice","B","Nautilus",10.99,"7D · 12800 DPI · RGB"],["mice","B","Octopus B",8.99,"6D · 3200 DPI"],["mice","B","Octopus W",8.99,"6D · 3200 DPI"],["mice","B","Coral B",14.99,"6D · 12800 DPI"],["mice","B","Coral W",14.99,"6D · 12800 DPI"],["mice","B","Manta B",11.99,"8D · 12800 DPI"],["mice","B","Manta W",11.99,"8D · 12800 DPI"],["mice","B","Manta G",11.99,"8D · 12800 DPI"],["mice","B","Raptor",10.99,"8D · 6400 DPI"],["pad","B","Walrus-XL",7.99,"800×400mm · anti-rrëshqitje"],["pad","B","Walrus-L",5.99,"400×300mm"],["pad","B","Revenge",7.99,"XL · 750×350mm"],["pad","B","Stormbringer",11.99,"750×350mm · anti-rrëshqitje"],["pad","B","Darkwater",11.99,"mauspad"],["pad","B","Ghostship",11.99,"mauspad"],["tast","B","Krill B",13.99,"TKL · membrane · RGB"],["tast","B","Krill W",13.99,"TKL · membrane · RGB"],["tast","B","Starfish",10.99,"membrane · RGB"],["tast","W","Viking 2",19.99,"tastierë"],["tast","W","Gladiator 2",24.99,"tastierë"],["tast","W","Spartan",44.99,"tastierë"],["tast","W","Spartan X",59.99,"tastierë"],["tast","W","Legionnaire 1",54.99,"mekanike"],["tast","W","Legionnaire X",69.99,"mekanike"],["tast","W","Kiowa",24.99,"tastierë"],["tast","W","Shinobi B",49.99,"mekanike · USB-C"],["tast","W","Shinobi W",49.99,"mekanike · USB-C"],["tast","W","Ronin",29.99,"membrane · dritë dinamike"],["tast","W","Commandos",42.99,"mekanike"],["tast","W","Wakizashi",32.99,"mekanike · 63 tasta"],["tast","W","Dakota",15.99,"RGB · USB"],["tast","W","Ashiko",29.99,"tastierë"],["mice","W","Cyrus",17.99,"me kabllo · LED"],["mice","W","Hannibal 2",19.99,"maus"],["mice","W","Galahad B/W/P",29.99,"6400 DPI · 72 g · RGB"],["mice","W","Shaka Zulu",29.99,"maus"],["mice","W","Azrael",19.99,"maus"],["mice","W","Lancelot",40,"7D · 6400 DPI · USB"],["mice","W","Tristan",23.99,"12000 DPI · 7 butona · 91 g"],["mice","W","Graphene",29.99,"maus"],["mice","W","Aero",39.99,"wireless"],["mice","W","Ector",28.99,"maus"],["head","W","Leopard",41.99,"kufje"],["head","W","Margay",41.99,"kufje"],["head","W","Tiger",41.99,"kufje"],["head","W","Jaguar 7.1",41.99,"kufje"],["head","W","Wildcat",41.99,"kufje"],["head","W","Coyote",41.99,"kufje"],["head","W","Firefly",41.99,"kufje"],["head","W","Gorilla",41.99,"kufje"],["head","W","Lion",44.99,"kufje"],["chair","W","Kings Throne",159.99,"universale · e zezë/kuqe"],["chair","W","Sheba",189.99,"karrige"],["chair","W","Dervish B/W",189.99,"karrige"],["chair","W","Red Devil",269.99,"karrige"],["chair","W","Racer Two",249.99,"karrige"],["chair","W","Thunderbolt",339.99,"RGB · e zezë/kuqe"],["chair","W","Indianapolis RGB",199.99,"RGB"],["cam","W","Owl",29.99,"kamera"]];
 var IMGS=(typeof IMG!=='undefined')?IMG:{};
 var IK={tast:0,mice:1,cam:4,chair:5,head:6,pad:3},BR={B:'Baracuda',W:'White Shark'};
@@ -214,11 +216,13 @@ document.querySelectorAll('.tab').forEach(function(b){b.addEventListener('click'
 $('q').addEventListener('input',function(){F.q=this.value.trim().toLowerCase();render()});
 $('pr').addEventListener('change',function(){F.pr=this.value;render()});
 $('so').addEventListener('change',function(){F.so=this.value;render()});
-document.querySelectorAll('[data-go]').forEach(function(b){b.addEventListener('click',function(){setTab(b.dataset.go);$('shop').scrollIntoView()})});/* shporta */
+document.querySelectorAll('[data-go]').forEach(function(b){b.addEventListener('click',function(){setTab(b.dataset.go);$('shop').scrollIntoView()})});
+
+/* shporta */
 var cart={},tm;
 try{var sv=JSON.parse(localStorage.getItem('mt_cart')||'{}');Object.keys(sv).forEach(function(k){if(P[k]&&sv[k]>0)cart[k]=Math.min(99,sv[k]|0)})}catch(e){}
 function save(){try{localStorage.setItem('mt_cart',JSON.stringify(cart))}catch(e){}}
-function toast(m,er){var e=$('toast');e.textContent=m;e.classList.toggle('err',!!er);e.classList.add('on');clearTimeout(tm);tm=setTimeout(function(){e.classList.remove('on')},2000)}
+function toast(m,er,ms){var e=$('toast');e.textContent=m;e.classList.toggle('err',!!er);e.classList.add('on');clearTimeout(tm);tm=setTimeout(function(){e.classList.remove('on')},ms||2000)}
 function cnt(){return Object.keys(cart).reduce(function(a,k){return a+cart[k]},0)}
 function sub(){return Object.keys(cart).reduce(function(a,k){return a+cart[k]*P[k].p},0)}
 function shipTxt(s){return s>=75?'Falas':'Do të konfirmohet'}
@@ -240,7 +244,7 @@ function closeM(){$('md').classList.remove('on');ck.open=false}
 function detail(i){var x=P[i];openM('<div class="dh" style="padding:0 0 12px;border:0"><h3 style="margin:0">'+esc(x.n)+'</h3><button class="x" data-act="close" aria-label="Mbyll">✕</button></div><div class="pd">'+pic(x).replace('data-act="detail"','').replace('role="button"','')+'<div><p class="mono" style="color:var(--mut);font-size:13px;margin:0 0 10px">'+esc(x.s)+'</p><p style="margin:0 0 6px">Kategoria: '+esc(CATS.filter(function(c){return c[0]===x.g})[0][1])+'</p><div class="big" style="font-size:34px;margin:8px 0 16px">'+fm(x.p)+'</div><button class="btn" style="width:100%" data-act="add" data-i="'+i+'">Shto në shportë</button></div></div>')}
 
 /* checkout */
-var ck={open:false,step:1,d:{},ship:'',pay:'',ref:''},ST5=['Shporta','Të dhënat','Dërgesa & pagesa','Verifikimi','Konfirmimi'];
+var ck={open:false,step:1,d:{},ship:'',pay:'',ref:'',mail:''},ST5=['Shporta','Të dhënat','Dërgesa & pagesa','Verifikimi','Konfirmimi'];
 var FL=[['emri','Emri','text','given-name',1],['mbiemri','Mbiemri','text','family-name',1],['tel','Numri i telefonit','tel','tel',1],['email','Emaili','email','email',1],['qyteti','Qyteti','text','address-level2',1],['adresa','Adresa e dërgesës','text','street-address',1,'w'],['shenime','Shënime shtesë (opsionale)','textarea','off',0,'w']];
 function checkout(){if(!cnt()){toast('Shporta është bosh.',1);return}ck.open=true;ck.step=1;ckRender();lock(true)}
 function stp(){return '<div class="stp">'+ST5.map(function(t,i){return '<span class="'+(i+1===ck.step?'on':i+1<ck.step?'dn':'')+'">'+(i+1)+'. '+t+'</span>'}).join('')+'</div>'}
@@ -251,8 +255,8 @@ function ckRender(){
  if(s===1)h+='<h3>Përmbledhja e shportës</h3>'+(cnt()?'<div class="rv">'+lines()+'</div>'+totals()+'<div class="nav2"><button class="btn ghost" data-act="close">← Kthehu te dyqani</button><button class="btn" data-act="next">Vazhdo</button></div>':'<p class="empty">Shporta është bosh.</p><div class="nav2"><button class="btn" data-act="close">Kthehu te dyqani</button></div>');
  if(s===2)h+='<h3>Të dhënat e porosisë</h3><div class="fg">'+FL.map(function(f){var v=esc(ck.d[f[0]]||''),a='id="f_'+f[0]+'" name="'+f[0]+'" autocomplete="'+f[3]+'" aria-describedby="e_'+f[0]+'"'+(f[4]?' required aria-required="true"':'');return '<div class="fld '+(f[5]||'')+'"><label for="f_'+f[0]+'">'+f[1]+(f[4]?' *':'')+'</label>'+(f[2]==='textarea'?'<textarea '+a+' rows="3" maxlength="400">'+v+'</textarea>':'<input '+a+' type="'+f[2]+'" value="'+v+'" maxlength="120">')+'<span class="er" id="e_'+f[0]+'"></span></div>'}).join('')+'</div><div class="nav2"><button class="btn ghost" data-act="prev">← Mbrapa</button><button class="btn" data-act="next">Vazhdo</button></div>';
  if(s===3)h+='<h3>Dërgesa dhe pagesa</h3><p style="margin:0 0 8px"><b>Mënyra e dërgesës</b></p><label class="opt"><input type="radio" name="ship" value="Dërgesë në adresë"'+(ck.ship?' checked':'')+'><span>Dërgesë në adresë<small>Falas për porosi mbi 75 €. Për porosi më të vogla, kostoja konfirmohet nga Machotronics.</small></span></label><p style="margin:14px 0 8px"><b>Mënyra e pagesës</b></p><label class="opt"><input type="radio" name="pay" value="Pagesë në dorëzim"'+(ck.pay?' checked':'')+'><span>Pagesë në dorëzim<small>Opsion i zgjedhshëm. Disponueshmëria konfirmohet nga Machotronics; nuk është shërbim i konfirmuar automatikisht.</small></span></label><div class="er" id="e_opt" style="color:var(--mg);font-size:13px"></div><div class="nav2"><button class="btn ghost" data-act="prev">← Mbrapa</button><button class="btn" data-act="next">Vazhdo</button></div>';
- if(s===4){var d=ck.d;h+='<h3>Verifikimi përfundimtar</h3><div class="rv"><h4>Produktet</h4>'+lines()+'</div><div class="rv"><h4>Të dhënat</h4>'+esc(d.emri+' '+d.mbiemri)+'<br>'+esc(d.tel)+' · '+esc(d.email)+'<br>'+esc(d.qyteti)+', '+esc(d.adresa)+(d.shenime?'<br><i>Shënim: '+esc(d.shenime)+'</i>':'')+'</div><div class="rv"><h4>Dërgesa dhe pagesa</h4>'+esc(ck.ship)+' · '+esc(ck.pay)+'</div>'+totals()+'<div class="nt">Kjo është një paraqitje paraprake. Porosia <b>nuk dërgohet automatikisht</b> te Machotronics dhe nuk ruhet në server; nuk bëhet asnjë pagesë.</div><div class="nav2"><button class="btn ghost" data-act="prev">← Mbrapa</button><button class="btn" id="place" data-act="place">Konfirmo porosinë</button></div>'}
- if(s===5)h+='<h3>Porosia u përgatit ✓</h3><p style="margin:0 0 6px;color:var(--mut)">Numri i referencës</p><div class="ref">'+esc(ck.ref)+'</div><div class="nt">Ky numër është vetëm referencë në këtë faqe. Porosia <b>nuk është dërguar</b> dhe nuk është regjistruar në server. Kopjo përmbledhjen dhe dërgoja Machotronics për ta përfunduar porosinë.</div><div class="rv"><h4>Produktet</h4>'+ck.sum.lines+'</div><div class="rv"><h4>Dërgesa</h4>'+esc(ck.sum.addr)+'<br>'+esc(ck.ship)+'</div><div class="rv"><h4>Pagesa</h4>'+esc(ck.pay)+'</div><div class="sm t"><span>Totali</span><span>'+fm(ck.sum.total)+'</span></div><p style="margin:16px 0 0">Faleminderit që zgjodhët Machotronics! 🎮</p><div class="nav2"><button class="btn ghost" data-act="copy">Kopjo përmbledhjen</button><button class="btn" data-act="close">Kthehu te dyqani</button></div>';
+ if(s===4){var d=ck.d;h+='<h3>Verifikimi përfundimtar</h3><div class="rv"><h4>Produktet</h4>'+lines()+'</div><div class="rv"><h4>Të dhënat</h4>'+esc(d.emri+' '+d.mbiemri)+'<br>'+esc(d.tel)+' · '+esc(d.email)+'<br>'+esc(d.qyteti)+', '+esc(d.adresa)+(d.shenime?'<br><i>Shënim: '+esc(d.shenime)+'</i>':'')+'</div><div class="rv"><h4>Dërgesa dhe pagesa</h4>'+esc(ck.ship)+' · '+esc(ck.pay)+'</div>'+totals()+'<div class="nt">Kur konfirmon, porosia dërgohet me email te Machotronics përmes shërbimit FormSubmit. Nuk bëhet asnjë pagesë online.</div><div class="nav2"><button class="btn ghost" data-act="prev">← Mbrapa</button><button class="btn" id="place" data-act="place">Konfirmo dhe dërgo porosinë</button></div>'}
+ if(s===5)h+='<h3>Porosia u përgatit ✓</h3><p style="margin:0 0 6px;color:var(--mut)">Numri i referencës</p><div class="ref">'+esc(ck.ref)+'</div>'+mailBlock()+'<div class="rv"><h4>Produktet</h4>'+ck.sum.lines+'</div><div class="rv"><h4>Dërgesa</h4>'+esc(ck.sum.addr)+'<br>'+esc(ck.ship)+'</div><div class="rv"><h4>Pagesa</h4>'+esc(ck.pay)+'</div><div class="sm t"><span>Totali</span><span>'+fm(ck.sum.total)+'</span></div><p style="margin:16px 0 0">Faleminderit që zgjodhët Machotronics! 🎮</p><div class="nav2">'+(ck.mail==='ok'||ck.mail==='sending'?'':'<button class="btn" data-act="mail">Dërgo me aplikacionin e emailit</button><a class="btn ghost" target="_blank" rel="noopener" href="'+gmailHref()+'">Dërgo me Gmail</a>')+'<button class="btn ghost" data-act="copy">Kopjo përmbledhjen</button><button class="btn ghost" data-act="close">Kthehu te dyqani</button></div>';
  $('md').innerHTML=h;$('md').classList.add('on');$('dr').classList.remove('on');ck.open=true}
 function readF(){FL.forEach(function(f){var e=$('f_'+f[0]);if(e)ck.d[f[0]]=e.value.trim()})}
 function validate(){
@@ -270,7 +274,18 @@ function place(){
  var b=$('place');if(b.disabled||!cnt())return;b.disabled=true;
  var items={};Object.keys(cart).forEach(function(k){items[P[k].n]=cart[k]});
  ck.sum={items:items,lines:lines(),total:sub(),addr:ck.d.qyteti+', '+ck.d.adresa};ck.ref=mkRef();
- cart={};save();ck.step=5;$('n').textContent=0;upd();ckRender();$('md').scrollTop=0}
+ cart={};save();ck.step=5;ck.mail='sending';$('n').textContent=0;upd();ckRender();$('md').scrollTop=0;sendMail()}
+
+var SHOP_EMAIL='machotronics@gmail.com';
+function gmailHref(){return 'https://mail.google.com/mail/?view=cm&fs=1&to='+SHOP_EMAIL+'&su='+encodeURIComponent('Porosi '+ck.ref)+'&body='+encodeURIComponent(summaryText())}
+function mailBlock(){if(ck.mail==='sending')return '<div class="nt">Po dërgohet porosia…</div>';if(ck.mail==='ok')return '<div class="nt" style="border-color:var(--ok)">✓ Porosia u dërgua me email te Machotronics. Ruaje numrin e referencës.</div>';return '<div class="nt">Dërgimi automatik nuk funksionoi. Dërgoje porosinë me një nga butonat më poshtë (adresa: '+SHOP_EMAIL+'): pa këtë hap Machotronics nuk e merr porosinë.</div>'}
+function sendMail(){var d=ck.d,s=ck.sum;ck.mail='sending';
+ var body={_subject:'Porosi e re '+ck.ref,_template:'table',_captcha:'false',Referenca:ck.ref,Emri:d.emri,Mbiemri:d.mbiemri,Telefoni:d.tel,email:d.email,Qyteti:d.qyteti,Adresa:d.adresa,Shenime:d.shenime||'-',Dergesa:ck.ship,Pagesa:ck.pay,Produktet:Object.keys(s.items).map(function(n){return s.items[n]+' x '+n}).join('; '),Totali:fm(s.total)+(s.total<75?' (pa dërgesën)':'')};
+ function done(v){ck.mail=v;if(ck.open&&ck.step===5)ckRender()}
+ fetch('https://formsubmit.co/ajax/'+SHOP_EMAIL,{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(body)}).then(function(r){return r.json()}).then(function(j){done(String(j.success)==='true'&&!/activat/i.test(j.message||'')?'ok':'fail')}).catch(function(){done('fail')})}
+function mailHref(){return 'mailto:'+SHOP_EMAIL+'?subject='+encodeURIComponent('Porosi '+ck.ref)+'&body='+encodeURIComponent(summaryText().replace(/\n/g,'\r\n'))}
+function mailApp(){var hid=false,h=function(){if(document.hidden)hid=true};document.addEventListener('visibilitychange',h);window.addEventListener('pagehide',h);window.addEventListener('blur',h);location.href=mailHref();
+ setTimeout(function(){document.removeEventListener('visibilitychange',h);window.removeEventListener('pagehide',h);window.removeEventListener('blur',h);if(!hid){try{navigator.clipboard.writeText(summaryText())}catch(e){}toast('Aplikacioni i emailit nuk u hap. Përmbledhja u kopjua: ngjite në një email te '+SHOP_EMAIL+' ose përdor butonin Gmail.',1,6000)}},1800)}
 
 /* ngjarjet */
 document.addEventListener('click',function(e){
@@ -278,7 +293,7 @@ document.addEventListener('click',function(e){
  if(a==='add'){addC(+i)}else if(a==='inc')setQ(i,cart[i]+1);else if(a==='dec')setQ(i,cart[i]-1);else if(a==='rm')setQ(i,0);
  else if(a==='cart')openCart();else if(a==='close'){closeAll()}else if(a==='detail')detail(+i);
  else if(a==='checkout')checkout();else if(a==='next')next();else if(a==='prev'){if(ck.step===2)readF();ck.step--;ckRender()}
- else if(a==='place')place();
+ else if(a==='place')place();else if(a==='mail')mailApp();
  else if(a==='copy'){var tx=summaryText();(navigator.clipboard?navigator.clipboard.writeText(tx):Promise.reject()).then(function(){toast('Përmbledhja u kopjua.')},function(){toast('Kopjimi nuk u realizua. Shënoje manualisht.',1)})}});
 document.addEventListener('keydown',function(e){if(e.key==='Escape')closeAll();if((e.key==='Enter'||e.key===' ')&&e.target.dataset&&e.target.dataset.act==='detail'){e.preventDefault();detail(+e.target.dataset.i)}});
 
