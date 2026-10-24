@@ -9,7 +9,7 @@
 <meta property="og:type" content="website"><meta property="og:title" content="MACHOTRONICS — Pajisje gaming"><meta property="og:description" content="Tastiera, maus, kufje, karrige dhe aksesorë White Shark dhe Baracuda."><meta property="og:locale" content="sq_AL">
 <meta name="twitter:card" content="summary">
 <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
-<script src="planet-bg.js"></script>body {
+>body {
 
   position: relative;
 
@@ -237,9 +237,11 @@ footer h4{color:var(--tx);margin:0 0 10px;font-size:14px}footer a,footer button.
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 </head>
-<body>(function(){
+<body>
+<script>
+(function(){
 var cv=document.createElement('canvas');cv.setAttribute('aria-hidden','true');
-cv.style.cssText='position:fixed;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none;display:block';
+cv.style.cssText='position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;display:block';
 var st=document.createElement('style');
 st.textContent='body{background:#01030a!important;background-image:none!important}body::before,body::after{display:none!important}';
 document.head.appendChild(st);document.body.insertBefore(cv,document.body.firstChild);
