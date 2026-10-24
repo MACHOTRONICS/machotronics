@@ -304,14 +304,10 @@ function drawRing(front,t){
   ctx.fillStyle='rgba('+p.c+','+(p.l*dim).toFixed(2)+')';ctx.fillRect(x,y,p.z*1.6,p.z*.8)}
 }
 function drawStars(t){
- for(var i=0;i<stars.length;i++){var s=stars[i],a=.3+.7*(.5+.5*Math.sin(t*s.v+s.p));ctx.fillStyle='rgba(180,210,255,'+a.toFixed(2)+')';ctx.fillRect(s.x,s.y,s.s,s.s)}
- if(!reduce&&t>nextB){var s2=stars[(Math.random()*stars.length)|0];bursts.push({x:s2.x,y:s2.y,t0:t,d:Array.from({length:7},function(){var an=rnd(0,6.283);return[Math.cos(an),Math.sin(an),rnd(.01,.03)]})});nextB=t+rnd(700,2000)}
- for(i=bursts.length-1;i>=0;i--){var bu=bursts[i],age=t-bu.t0;if(age>1000){bursts.splice(i,1);continue}
-  var al=(1-age/1000)*.4;ctx.fillStyle='rgba(190,220,255,'+al.toFixed(2)+')';ctx.fillRect(bu.x-1,bu.y-1,2.5,2.5);
-  for(var j=0;j<bu.d.length;j++){var d=bu.d[j];ctx.fillRect(bu.x+d[0]*d[2]*age*6,bu.y+d[1]*d[2]*age*6,1.2,1.2)}}
+ 
 }
 function frame(t){
- ctx.drawImage(bg,0,0,W,H);drawStars(t);
+ ctx.drawImage(bg,0,0,W,H);
  var g=ctx.createRadialGradient(cx,cy,R*.9,cx,cy,R*1.9);g.addColorStop(0,'rgba(30,80,255,.22)');g.addColorStop(1,'rgba(30,80,255,0)');ctx.fillStyle=g;ctx.fillRect(0,0,W,H);
  drawRing(false,t);drawPlanet(t*.00003);drawRing(true,t)
 }
