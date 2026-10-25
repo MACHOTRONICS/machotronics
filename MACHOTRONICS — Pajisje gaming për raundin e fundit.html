@@ -136,7 +136,7 @@ x.fillStyle=g;x.fillRect(px,cy-hh,step+1,hh*1.25)}});
 x.globalCompositeOperation='source-over'}
 function loop(){t=performance.now();frame();raf=requestAnimationFrame(loop)}
 function start(){cancelAnimationFrame(raf);size();if(red){t=5000;frame();return}loop()}
-start();var rt;addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(start,200)})})(); <style>
+start();var rt;addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(start,200)})})();; <style>
 :root{--bg:#0B0D12;--surf:#151922;--line:#252B38;--tx:#E8ECF4;--mut:#8A93A6;--cy:#19E6FF;--uv:#8B5CF6;--mg:#FF2E88;--ok:#2BE3A1;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 html{scroll-padding-top:calc(70px + env(safe-area-inset-top,0px));scroll-behavior:smooth}
 *,*::before,*::after{box-sizing:inherit}
